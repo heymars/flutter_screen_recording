@@ -15,6 +15,7 @@ import androidx.core.app.NotificationCompat
 import androidx.core.content.ContextCompat
 import android.app.Activity
 import android.os.Binder
+import com.isvisoft.flutter_screen_recording.R
 
 class ForegroundService : Service() {
     private val CHANNEL_ID = "ForegroundService Kotlin"
@@ -117,7 +118,7 @@ class ForegroundService : Service() {
         val notification = NotificationCompat.Builder(this, CHANNEL_ID)
             .setContentTitle(title)
             .setContentText(message)
-            .setSmallIcon(R.drawable.icon)
+//            .setSmallIcon(R.drawable.icon)
             .setContentIntent(pendingIntent)
             .build()
 

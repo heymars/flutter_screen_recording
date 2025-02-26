@@ -79,20 +79,15 @@ class FlutterScreenRecording {
             channelDescription: messageNotification,
             channelImportance: NotificationChannelImportance.LOW,
             priority: NotificationPriority.LOW,
-            iconData: const NotificationIconData(
-              resType: ResourceType.mipmap,
-              resPrefix: ResourcePrefix.ic,
-              name: 'launcher',
-            ),
           ),
           iosNotificationOptions: const IOSNotificationOptions(
             showNotification: true,
             playSound: false,
           ),
-          foregroundTaskOptions: const ForegroundTaskOptions(
-            interval: 5000,
+          foregroundTaskOptions:  ForegroundTaskOptions(
             autoRunOnBoot: true,
             allowWifiLock: true,
+            eventAction: ForegroundTaskEventAction.once()
           ),
         );
       }
